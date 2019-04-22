@@ -1,7 +1,27 @@
 
-final List names = [
-  'Femur fracture',
-  'Fibula Fracture',
-  'Wrist Fracture'
-];
-
+List<String> names = [ 
+  'Acetabulum',
+  'Ankle',
+  'Calcaneus',
+  'Clavicle',
+  'Distal Femur',
+  'Distal Humerus',
+  'Distal Radius',
+  'Femoral Head',
+  'Femoral Neck Fracture',
+  'Femoral Shaft',
+  'Fibula Shaft',
+  'Forefoot',
+  'Hand',
+  'Humeral Shaft',
+  'Midfoot',
+  'Olecranon',
+  'Pelvis',
+  'Proximal Humerus',
+  'Scapula',
+  'Subtrochanteric Fracture',
+  'Talus',
+  'Tibia Shaft',
+  'Tibial Plateau',
+  'Wrist' 
+  ];
