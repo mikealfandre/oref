@@ -27,7 +27,6 @@ class _OrefAppState extends State<OrefApp> {
       List<String> dummyListData = List<String>();
       namesCopy.forEach((item) {
         final char = item.toLowerCase();
-        print(item);
         if (char.contains(query) || item.contains(query)) {
           dummyListData.add(item);
         }
@@ -48,7 +47,12 @@ class _OrefAppState extends State<OrefApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        home: Scaffold(
+      theme: ThemeData(fontFamily: 'WorkSans',
+        textTheme: TextTheme(
+          body1: TextStyle(fontSize: 34.0, fontWeight: FontWeight.bold)
+        )
+      ),
+      home: Scaffold(
       appBar: AppBar(title: Text('Oref')),
       body: Container(
         child: Column(
