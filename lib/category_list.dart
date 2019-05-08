@@ -27,14 +27,15 @@ class CategoryList extends StatelessWidget {
               leading: Icon(icons[4]),
               title: Text(
                 items[index],
-                style: TextStyle(fontWeight: FontWeight.w500, fontSize: 20.0),
+                style: TextStyle(fontWeight: FontWeight.w500, fontSize: 18.0),
               ),
               onTap: () {
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => CategoryPage(name: items[index])),
                 );
-              }),
+              }
+              ),
         );
       },
     );

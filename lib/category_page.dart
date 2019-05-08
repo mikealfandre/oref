@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 
 class CategoryPage extends StatelessWidget {
   final String name;
@@ -8,9 +9,20 @@ class CategoryPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(name),
-      ),
-    );
+        appBar: AppBar(
+          title: Text(name),
+        ),
+        body: StreamBuilder(
+            stream: Firestore.instance.collection('bones').snapshots(),
+            builder: (context, snapshot) {
+              if (!snapshot.hasData) return const Text('Loading...');
+              return Column(
+                children: <Widget>[
+                  Text(snapshot.data.documents[1]['name']),
+                  Text(snapshot.data.documents[1]['amount'].toString())
+                ],
+              );
+            })
+            );
   }
 }
