@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'category_page.dart';
 
 class CategoryList extends StatelessWidget {
-  final List<String> items;
+  List<String> items;
   CategoryList(this.items);
 
   @override
@@ -24,10 +25,15 @@ class CategoryList extends StatelessWidget {
         return Card(
           child: ListTile(
               leading: Icon(icons[4]),
-              title:
-                  Text(items[index], style: TextStyle(fontWeight: FontWeight.w500, fontSize: 20.0),),
+              title: Text(
+                items[index],
+                style: TextStyle(fontWeight: FontWeight.w500, fontSize: 20.0),
+              ),
               onTap: () {
-                print('hello');
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => CategoryPage(name: items[index])),
+                );
               }),
         );
       },

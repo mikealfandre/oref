@@ -13,6 +13,7 @@ class _OrefAppState extends State<OrefApp> {
   TextEditingController editingController = TextEditingController(); //Need more explaining on this. Does this track and update every input change?
 
   var items = List<String>();
+  // var items = List<String>();
 
   @override
   void initState() {
