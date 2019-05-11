@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'category_objects.dart';
 
 class CategoryPage extends StatelessWidget {
   final String name;
@@ -19,7 +20,7 @@ class CategoryPage extends StatelessWidget {
               return Column(
                 children: <Widget>[
                   Text(snapshot.data.documents[1]['name']),
-                  Text(snapshot.data.documents[1]['amount'].toString())
+                  Text(snapshot.data.documents[1]['amount'].toString()),
                 ],
               );
             })
