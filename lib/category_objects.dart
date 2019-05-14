@@ -1,15 +1,18 @@
-var info =  
+var info =  [
   {
-    'Tibz' : {
-      'content' : 'This is bombz',
-      'treatment' : '2 weeks'
-    },
-    'Fibbyz' : {
-      'content' : 'Dis iz fibz',
-      'treatment' : '5 days'
-    }
-      
-  };
+    "name" : 'Sample Name 1',
+    "amount" : 4
+  },
+  {
+    "name" : 'Sample Name 2',
+    "amount" : 7
+  },
+  {
+    "name" : 'Sample Name 3',
+    "amount" : 2
+  }
+];
+  
 
     
   
