@@ -21,11 +21,13 @@
 # Flutter/Dart/Pub related
 **/doc/api/
 .dart_tool/
+.flutter-plugins-dependencies
 .flutter-plugins
 .packages
 .pub-cache/
 .pub/
 /build/
+Flutter.podspec
 
 # Android related
 **/android/**/gradle-wrapper.jar
@@ -68,3 +70,6 @@
 !**/ios/**/default.pbxuser
 !**/ios/**/default.perspectivev3
 !/packages/flutter_tools/test/data/dart_dependencies_test/**/.packages
+ios/Flutter/flutter_export_environment.sh
+ios/Runner.xcodeproj/project.pbxproj
+ios/Podfile.lock
