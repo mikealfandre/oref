@@ -19,7 +19,7 @@ class CategoryPage extends StatelessWidget {
               if (!snapshot.hasData) return const Text('Loading...');
               return Column(
                 children: <Widget>[
-                  Text(snapshot.data.documents[1]['name']),
+                  // Text(snapshot.data.documents[1]['name']),
                   Text(snapshot.data.documents[1]['amount'].toString()),
                   Text(info[0]["name"])
                 ],
