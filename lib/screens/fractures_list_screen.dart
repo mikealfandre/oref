@@ -1,30 +1,39 @@
 import 'package:flutter/material.dart';
-import '../widgets/fractures_list.dart';
+import 'package:oref/widgets/fractures_list.dart';
+import 'package:oref/category_names.dart';
+import 'package:oref/widgets/search_bar.dart';
 
-class FracturesListScreen extends StatelessWidget {
+class FracturesListScreen extends StatefulWidget {
+  @override
+  _FracturesListScreenState createState() => _FracturesListScreenState();
+}
+
+class _FracturesListScreenState extends State<FracturesListScreen> {
+  // var fractures = List<String>();
+
+  // @override
+  // void initState() {
+  //   fractures.addAll(names);
+  //   super.initState();
+  //   print(fractures);
+  // }
+
+  List<String> fractures = names;
+
   @override
   Widget build(BuildContext context) {
+    // print(fractures);
     return Scaffold(
       appBar: AppBar(title: Text('Oref')),
       body: Container(
         child: Column(
           children: <Widget>[
-            Padding(
-              padding: const EdgeInsets.all(9.0),
-              child: TextField(
-                onChanged: (value) {
-                  // filterSearchResults(value);
-                },
-                // controller: editingController,
-                decoration: InputDecoration(
-                    labelText: "Search",
-                    hintText: "Search",
-                    prefixIcon: Icon(Icons.search),
-                    border: OutlineInputBorder(
-                        borderRadius: BorderRadius.all(Radius.circular(25.0)))),
-              ),
-            ),
-            Expanded(child: FracturesList()),
+            SearchBar(
+                fractures: fractures,
+                callback: (newFractureList) => {
+                      setState(() => {fractures = newFractureList})
+                    }),
+            Expanded(child: FracturesList(fractures: fractures)),
           ],
         ),
       ),

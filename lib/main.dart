@@ -68,26 +68,26 @@ class MyApp extends StatelessWidget {
 //         home: Scaffold(
 //           appBar: AppBar(title: Text('Oref')),
 //           body: Container(
-//             child: Column(
-//               children: <Widget>[
-//                 Padding(
-//                   padding: const EdgeInsets.all(9.0),
-//                   child: TextField(
-//                     onChanged: (value) {
-//                       filterSearchResults(value);
-//                     },
-//                     controller: editingController,
-//                     decoration: InputDecoration(
-//                         labelText: "Search",
-//                         hintText: "Search",
-//                         prefixIcon: Icon(Icons.search),
-//                         border: OutlineInputBorder(
-//                             borderRadius:
-//                                 BorderRadius.all(Radius.circular(25.0)))),
-//                   ),
-//                 ),
-//                 Expanded(child: CategoryList(items)),
-//               ],
+// child: Column(
+//   children: <Widget>[
+//     Padding(
+//       padding: const EdgeInsets.all(9.0),
+//       child: TextField(
+//         onChanged: (value) {
+//           filterSearchResults(value);
+//         },
+//         controller: editingController,
+//         decoration: InputDecoration(
+//             labelText: "Search",
+//             hintText: "Search",
+//             prefixIcon: Icon(Icons.search),
+//             border: OutlineInputBorder(
+//                 borderRadius:
+//                     BorderRadius.all(Radius.circular(25.0)))),
+//       ),
+//     ),
+//     Expanded(child: CategoryList(items)),
+//   ],
 //             ),
 //           ),
 //         ));
