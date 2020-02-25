@@ -13,45 +13,10 @@ class SearchBar extends StatefulWidget {
 class _SearchBarState extends State<SearchBar> {
   final TextEditingController editingController = TextEditingController();
 
-  void filterSearchResults(String query) {
-    // var namesCopy = new List<String>.from(names);
-    // namesCopy.addAll(widget.fractures);
-    // namesCopy = new List<String>.from(numMoons.keys);
-    print("namesCopy");
-    // print(namesCopy);
-    // print(namesCopy);
-    if (query.isNotEmpty) {
-      // List<String> dummyListData = List<String>();
-      // namesCopy.forEach((item) {
-      //   final char = item.toLowerCase();
-      //   if (char.contains(query) || item.contains(query)) {
-      //     dummyListData.add(item);
-      //   }
-      // });
-      List<String> dummyListData = List<String>();
-      names.forEach((item) {
-        // final char = item.toLowerCase();
-        if (item.contains(query)) {
-          dummyListData.add(item);
-        }
-      });
-      // setState(() {
-      //   // items.clear();
-      //   // items.addAll(dummyListData);
-      // });
-      // return;
-      widget.fractures.clear();
-      widget.fractures.addAll(dummyListData);
-      widget.callback(widget.fractures);
-    } else {
-      // setState(() {
-      //   // items.clear();
-      //   // items.addAll(names);
-      // });
-      widget.fractures.clear();
-      widget.fractures.addAll(names);
-      widget.callback(widget.fractures);
-    }
+  void newFilter(String query) {
+    var filteredNames =
+        names.where((name) => name.toLowerCase().contains(query.toLowerCase()));
+    widget.callback(filteredNames);
   }
 
   @override
@@ -61,7 +26,7 @@ class _SearchBarState extends State<SearchBar> {
       padding: const EdgeInsets.all(9.0),
       child: TextField(
         onChanged: (value) {
-          filterSearchResults(value);
+          newFilter(value);
         },
         controller: editingController,
         decoration: InputDecoration(

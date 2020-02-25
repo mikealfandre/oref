@@ -30,9 +30,13 @@ class _FracturesListScreenState extends State<FracturesListScreen> {
           children: <Widget>[
             SearchBar(
                 fractures: fractures,
-                callback: (newFractureList) => {
-                      setState(() => {fractures = newFractureList})
-                    }),
+                callback: (newFractureList) {
+                  setState(() {
+                    // fractures.add(newFractureList);
+                    fractures = [...newFractureList];
+                  });
+                  // print(fractures);
+                }),
             Expanded(child: FracturesList(fractures: fractures)),
           ],
         ),

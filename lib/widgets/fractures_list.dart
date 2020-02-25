@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import './fracture_list_tile.dart';
-// import '../category_names.dart';
 
 class FracturesList extends StatelessWidget {
   FracturesList({@required this.fractures});
