@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:oref/screens/fracture_main_page.dart';
 import '../category_page.dart';
 
 class FractureListTile extends StatelessWidget {
@@ -32,7 +33,7 @@ class FractureListTile extends StatelessWidget {
             Navigator.push(
               context,
               MaterialPageRoute(
-                  builder: (context) => CategoryPage(name: fractureTitle)),
+                  builder: (context) => FractureMainPage(name: fractureTitle)),
             );
           }),
     );

@@ -5,7 +5,7 @@ import 'category_objects.dart';
 class CategoryPage extends StatelessWidget {
   final String name;
 
-  CategoryPage({Key key, @required this.name}) : super(key: key);
+  CategoryPage({Key key, @required this.name});
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +24,6 @@ class CategoryPage extends StatelessWidget {
                   Text(info[0]["name"])
                 ],
               );
-            })
-            );
+            }));
   }
 }

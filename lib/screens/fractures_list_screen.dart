@@ -9,20 +9,10 @@ class FracturesListScreen extends StatefulWidget {
 }
 
 class _FracturesListScreenState extends State<FracturesListScreen> {
-  // var fractures = List<String>();
-
-  // @override
-  // void initState() {
-  //   fractures.addAll(names);
-  //   super.initState();
-  //   print(fractures);
-  // }
-
-  List<String> fractures = names;
+  List<String> fractures = [...names];
 
   @override
   Widget build(BuildContext context) {
-    // print(fractures);
     return Scaffold(
       appBar: AppBar(title: Text('Oref')),
       body: Container(
@@ -32,10 +22,8 @@ class _FracturesListScreenState extends State<FracturesListScreen> {
                 fractures: fractures,
                 callback: (newFractureList) {
                   setState(() {
-                    // fractures.add(newFractureList);
                     fractures = [...newFractureList];
                   });
-                  // print(fractures);
                 }),
             Expanded(child: FracturesList(fractures: fractures)),
           ],
