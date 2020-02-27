@@ -23,7 +23,7 @@ class _SearchBarState extends State<SearchBar> {
   Widget build(BuildContext context) {
     return Container(
         child: Padding(
-      padding: const EdgeInsets.all(9.0),
+      padding: EdgeInsets.all(9.0),
       child: TextField(
         onChanged: (value) {
           newFilter(value);
