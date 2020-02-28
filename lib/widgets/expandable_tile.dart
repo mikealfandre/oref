@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 
 class ExpandableTile extends StatefulWidget {
+  final String fracture;
+
+  const ExpandableTile({Key key, this.fracture}) : super(key: key);
   @override
   _ExpandableTileState createState() => _ExpandableTileState();
 }
@@ -29,7 +32,8 @@ class _ExpandableTileState extends State<ExpandableTile> {
           )
         ],
         title: Text(
-          "A fracture",
+          // widget.sub,
+          "Hi",
           style: TextStyle(
               color: Colors.black, fontSize: 20.0, fontWeight: FontWeight.w600),
           key: Key("title"),
